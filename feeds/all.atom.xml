@@ -26,6 +26,7 @@ if has(&amp;quot;autocmd&amp;quot;)
 
 &lt;p&gt;其中：&lt;/p&gt;
 &lt;p&gt;NERDTree是vim的一个树形目录插件。可以在vim中浏览目录。&lt;/p&gt;
+<<<<<<< HEAD
 &lt;p&gt;map是一个vim的映射命令，将常用的很长的命令映射到一个新的功能键上。&lt;/p&gt;</summary><category term="vim"></category></entry><entry><title>Usage of Vim</title><link href="/usage-of-vim.html" rel="alternate"></link><updated>2012-10-31T00:00:00+08:00</updated><author><name>2ice</name></author><id>tag:,2012-10-31:usage-of-vim.html</id><summary type="html">&lt;h3&gt;替换&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;:n1,n2s/word1/word2/gc&lt;/code&gt;: 在第n1与n2行之间寻找word1这个字符串，并将该字符串取代为word2.&lt;br /&gt;
 &lt;code&gt;:%s/word1/word2/gc&lt;/code&gt;: 寻找所有word1这个字符串，并将该字符串取代为word2.&lt;br /&gt;
@@ -104,3 +105,6 @@ if has(&amp;quot;autocmd&amp;quot;)
 &lt;code&gt;:nohlsearch&lt;/code&gt;: 可取消在搜索后会加亮的关键字&lt;br /&gt;
 &lt;code&gt;:e&lt;/code&gt;: 重新加载当前文件&lt;br /&gt;
 &lt;code&gt;:e!&lt;/code&gt;: 强制重新加载当前文件，放弃修改&lt;/p&gt;</summary><category term="vim"></category></entry></feed>
+=======
+&lt;p&gt;map是一个vim的映射命令，将常用的很长的命令映射到一个新的功能键上。&lt;/p&gt;</summary><category term="vim"></category></entry></feed>
+>>>>>>> 96e7162ee3a736f060e34692fa6fed1d250370c5
