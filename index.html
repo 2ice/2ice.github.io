@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>init</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">init </a></h1>
+                <nav><ul>
+                    <li><a href="/category/vim.html">vim</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/my-vim-config.html">My Vim Config</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2012-10-31T00:00:00+08:00">
+                Published: 三 31 十月 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/2ice.html">2ice</a>
+        </address>
+<p>In <a href="/category/vim.html">vim</a>.</p>
+<p>tags: <a href="/tag/vim.html">vim</a> </p>
+</footer><!-- /.post-info --><div class="highlight"><pre>set nu   &quot;显示行号
+set nocompatible   &quot;如果没有这个，配置中&lt;CR&gt;等无法被识别
+set shiftwidth=4   &quot;自动缩进所使用的空白符长度
+set tabstop=4   &quot;tab的空格长度
+set autoindent   &quot;新增一行时，把当前行的indent应用到新行
+set cursorline   &quot;当前行加下划线
+set hlsearch   &quot;搜索时高亮
+set ignorecase   &quot;搜索时忽略大小写
+syntax on   &quot;开启语法高亮
+
+&quot;设置按&lt;F7&gt;为取消搜索高亮
+nmap &lt;silent&gt; &lt;F7&gt; :nohl&lt;CR&gt;
+cmap &lt;silent&gt; &lt;F7&gt; :nohl&lt;CR&gt;
+
+&quot;显示或隐藏NERDTree区域
+nmap &lt;silent&gt; &lt;F3&gt; :NERDTreeToggle&lt;CR&gt;
+cmap &lt;silent&gt; &lt;F3&gt; :NERDTreeToggle&lt;CR&gt;
+
+&quot;重新打开一个文件时，跳转到上次打开最后的位置
+if has(&quot;autocmd&quot;)
+  au BufReadPost * if line(&quot;&#39;\&quot;&quot;) &gt; 1 &amp;&amp; line(&quot;&#39;\&quot;&quot;) &lt;= line(&quot;$&quot;) | exe &quot;normal! g&#39;\&quot;&quot; | endif
+  endif
+</pre></div>
+
+
+<p>其中：</p>
+<p>NERDTree是vim的一个树形目录插件。可以在vim中浏览目录。</p>
+<p>map是一个vim的映射命令，将常用的很长的命令映射到一个新的功能键上。</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/usage-of-vim.html" rel="bookmark"
+                           title="Permalink to Usage of Vim">Usage of Vim</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-10-31T00:00:00+08:00">
+                Published: 三 31 十月 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/2ice.html">2ice</a>
+        </address>
+<p>In <a href="/category/vim.html">vim</a>.</p>
+<p>tags: <a href="/tag/vim.html">vim</a> </p>
+</footer><!-- /.post-info -->                <p>vim一些用法</p>
+                <a class="readmore" href="/usage-of-vim.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

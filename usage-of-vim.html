@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Usage of Vim</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">init </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="/category/vim.html">vim</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/usage-of-vim.html" rel="bookmark"
+           title="Permalink to Usage of Vim">Usage of Vim</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-10-31T00:00:00+08:00">
+                Published: 三 31 十月 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/2ice.html">2ice</a>
+        </address>
+<p>In <a href="/category/vim.html">vim</a>.</p>
+<p>tags: <a href="/tag/vim.html">vim</a> </p>
+</footer><!-- /.post-info -->      <h3>替换</h3>
+<p><code>:n1,n2s/word1/word2/gc</code>: 在第n1与n2行之间寻找word1这个字符串，并将该字符串取代为word2.<br />
+<code>:%s/word1/word2/gc</code>: 寻找所有word1这个字符串，并将该字符串取代为word2.<br />
+<code>:s/word1/word2/gc</code>: 寻找当前行word1这个字符串，并将该字符串取代为word2. 
+<code>:1,$s/word1/word2/gc</code>: 从第一行到最后一行寻找word1字符串，并将该字符串取代为word2。且在取代前显示提示字符给使用者确认（conform）是否需要取代.</p>
+<h3>翻页</h3>
+<p><code>Ctrl+b</code>: 上一页<br />
+<code>Ctrl+f</code>: 下一页<br />
+<code>Ctrl+u</code>: 上翻页半页<br />
+<code>Ctrl+d</code>: 下翻页半页</p>
+<h3>跳转</h3>
+<p>以下快捷键都是命令模式下<br />
+<code>%</code>: 跳转到配对的括号去<br />
+<code>[[</code>: 跳转到代码块的开头去（要求代码块中'{'必须单独占一行）<br />
+<code>gD</code>: 跳转到局部变量的定义处<br />
+<code>``</code>: 跳转到光标上次停靠的地方，是两个“`”<br />
+<code>*</code>: 转到当前光标所指的单词的下一次出现的地方<br />
+<code>#</code>: 转到当前光标所指的单词的上一次出现的地方<br />
+<code>zz</code>: 将当前行放置于页面中间，利于阅读<br />
+<code>zt</code>: 将当前行放置于页面的最顶端，一般阅读函数定义非常有用  </p>
+<h3>书签</h3>
+<p><code>mx</code>: 设置书签，x只能是[a-zA-Z]的字母<br />
+<code>`x</code>: 跳转到书签x处（`是1左边的键）<br />
+<code>:mark</code>: 列出所有书签<br />
+<code>:delm x</code>: 删除书签x  </p>
+<h3>搜索</h3>
+<p><code>\word</code>: 搜索"word"，如果没有设置<code>:set ignorecase</code>则搜索时匹配大小写<br />
+<code>\cword</code>: 单次搜索时忽略大小写。会匹配"word"，"Word"，"wOrD"等等。<br />
+<code>\Cword</code>: 单次搜索时匹配大小写。默认选项。只会匹配"word"<br />
+<code>:set ignorecase</code>: 搜索时忽略大小写</p>
+<h3>缩进</h3>
+<h4>行首缩进</h4>
+<p><code>&gt;&gt;</code>: 增加缩进，<code>x&gt;&gt;</code>表示增加以下x行的缩进<br />
+<code>&lt;&lt;</code>: 减少缩进，<code>x&lt;&lt;</code>表示减少以下x行的缩进</p>
+<h4>用visual模式缩进。</h4>
+<p>与上面行首缩进的区别是，缩进多行时，从visual模式选中的当前列开始缩进。  </p>
+<ol>
+<li>Ctrl + v选中行</li>
+<li>&lt;向左缩进  &gt;向右缩进</li>
+</ol>
+<h3>多窗口操作</h3>
+<p><code>:split filename</code>: 新加一个窗口水平打开filename<br />
+<code>:vsplit filename</code>: 新加一个窗口垂直打开filename<br />
+<code>Ctrl-w &gt;</code>: 在多窗口时增大窗口宽度（如果是vsplit）或高度（如果是split）<br />
+<code>Ctrl-w &lt;</code>: 在多窗口时减小间隙及就窗口宽度（如果是vsplit）或高度（如果是split）<br />
+<code>Ctrl-w w</code>: 在多个窗口之间切换<br />
+<code>Ctrl-w L</code>: 将当前窗口往右移动，同右边的交换位置。其他同理。<br />
+<code>:tabnew filename</code>: 在另一个标签页中打开filename  </p>
+<h3>批量插入</h3>
+<h4>在每行首（或行尾）插入文本</h4>
+<p><code>%s/^/word</code>: 每行的行首都添加一个字符串"word"<br />
+<code>%s/$/word</code>: 每行的行尾都添加一个字符串"word"  </p>
+<h4>在选中的块首（或块尾）插入文本</h4>
+<ol>
+<li>Ctrl + v 选中行</li>
+<li>输入I（行后插入用A）    </li>
+<li>输入文本    </li>
+<li>输入ESC</li>
+</ol>
+<h3>其他技巧</h3>
+<h4>代码补全</h4>
+<p><code>Ctrl-n</code> </p>
+<h4>折叠文件</h4>
+<p><code>zf20G</code>: 从当前行到20行折叠<br />
+<code>zo</code>: 打开折叠的部分</p>
+<h4>编辑只读文件后保存</h4>
+<p><code>:w !sudo tee %</code><br />
+<a href="http://www.haw-haw.org/post/1501">对该命令的解释</a><br />
+<a href="http://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work">对该命令的解释2</a></p>
+<h4>其他</h4>
+<p><code>:colo evening</code>: 夜晚模式<br />
+<code>:set nonu</code>: 取消行号<br />
+<code>:set nu</code>: 显示行号<br />
+<code>:set cursorline</code>: 水平线<br />
+<code>:set cursorcolumn</code>: 垂直线<br />
+<code>:nohlsearch</code>: 可取消在搜索后会加亮的关键字<br />
+<code>:e</code>: 重新加载当前文件<br />
+<code>:e!</code>: 强制重新加载当前文件，放弃修改</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
