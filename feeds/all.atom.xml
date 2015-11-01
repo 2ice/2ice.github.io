@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>init</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2012-10-31T00:00:00+08:00</updated><entry><title>My Vim Config</title><link href="/my-vim-config.html" rel="alternate"></link><updated>2012-10-31T00:00:00+08:00</updated><author><name>2ice</name></author><id>tag:,2012-10-31:my-vim-config.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;set nu   &amp;quot;显示行号
+set nocompatible   &amp;quot;如果没有这个，配置中&amp;lt;CR&amp;gt;等无法被识别
+set shiftwidth=4   &amp;quot;自动缩进所使用的空白符长度
+set tabstop=4   &amp;quot;tab的空格长度
+set autoindent   &amp;quot;新增一行时，把当前行的indent应用到新行
+set cursorline   &amp;quot;当前行加下划线
+set hlsearch   &amp;quot;搜索时高亮
+set ignorecase   &amp;quot;搜索时忽略大小写
+syntax on   &amp;quot;开启语法高亮
+
+&amp;quot;设置按&amp;lt;F7&amp;gt;为取消搜索高亮
+nmap &amp;lt;silent&amp;gt; &amp;lt;F7&amp;gt; :nohl&amp;lt;CR&amp;gt;
+cmap &amp;lt;silent&amp;gt; &amp;lt;F7&amp;gt; :nohl&amp;lt;CR&amp;gt;
+
+&amp;quot;显示或隐藏NERDTree区域
+nmap &amp;lt;silent&amp;gt; &amp;lt;F3&amp;gt; :NERDTreeToggle&amp;lt;CR&amp;gt;
+cmap &amp;lt;silent&amp;gt; &amp;lt;F3&amp;gt; :NERDTreeToggle&amp;lt;CR&amp;gt;
+
+&amp;quot;重新打开一个文件时，跳转到上次打开最后的位置
+if has(&amp;quot;autocmd&amp;quot;)
+  au BufReadPost * if line(&amp;quot;&amp;#39;\&amp;quot;&amp;quot;) &amp;gt; 1 &amp;amp;&amp;amp; line(&amp;quot;&amp;#39;\&amp;quot;&amp;quot;) &amp;lt;= line(&amp;quot;$&amp;quot;) | exe &amp;quot;normal! g&amp;#39;\&amp;quot;&amp;quot; | endif
+  endif
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;其中：&lt;/p&gt;
+&lt;p&gt;NERDTree是vim的一个树形目录插件。可以在vim中浏览目录。&lt;/p&gt;
+&lt;p&gt;map是一个vim的映射命令，将常用的很长的命令映射到一个新的功能键上。&lt;/p&gt;</summary><category term="vim"></category></entry></feed>
